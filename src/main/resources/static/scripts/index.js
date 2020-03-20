@@ -1,14 +1,19 @@
-function signin(){
-    var userId = document.getElementById("userid").value;
-    fetch('http://localhost:8080/get/'+userId, {
+var domain = window.location.origin
+function signin() {
+    getAllUsers();
+}
+
+function getAllUsers() {
+
+    var fetchUrl = domain + "/get/all";
+    fetch(fetchUrl, {
         method: 'GET',
     })
-    .then((response) => response.json())
-    .then((result) => {
-            window.location = "dashboard.html";
+        .then((response) => response.json())
+        .then((result) => {
             console.log('Success:', result);
         })
-    .catch((error) => {
-        console.error('Error:', error);
+        .catch((error) => {
+            console.error('Error:', error);
         });
 }
