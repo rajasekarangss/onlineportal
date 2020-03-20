@@ -10,7 +10,7 @@ addons:
   sonarcloud:
     organization: rajasekarangss
     token:
-      secure: 04ca1fe7804e22c2f14e7d72fa0ec1cf93c01875
+      secure: 32e73367defb97fb9a7304f04a0469ea7fb5abd5
 
 # before_install:
 # - chmod +x mvnw
